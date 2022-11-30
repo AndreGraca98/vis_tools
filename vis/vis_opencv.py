@@ -141,6 +141,15 @@ class CV2(BaseVis):
             ], f"Expected number of channels to be one of [1,3,4]. Got: channels={img.shape[~0]}"
 
         if shape is not None:
+            if isinstance(shape, (int, float, str)):
+                shape = (int(shape), int(shape))
+            elif isinstance(shape, (tuple, list)):
+                ...
+            else:
+                raise TypeError(
+                    f"Expected shape to be of type: int, float, str, tuple or list. Got: {type(shape)} ."
+                )
+
             img = cv2.resize(img, dsize=shape)  # type:ignore
 
         if img.ndim == 3 and img.shape[~0] == 3:

@@ -40,7 +40,7 @@ img_PLT = PLT.read('im_PLT.png')
 
 ```python
 # Show
-img_PLT = PLT.show(img_PLT)
+img_PLT = PLT.show(img_PLT, figsize=5)
 ```
 
 ### 2. opencv
@@ -61,7 +61,7 @@ img_CV2 = CV2.read('im_CV2.png')
 
 ```python
 # Show
-img_CV2 = CV2.show(img_CV2, wait_time=0) # wait_time=0 waits for user input
+img_CV2 = CV2.show(img_CV2, (224, 224)) 
 ```
 
 ### 3. PIL
