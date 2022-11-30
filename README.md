@@ -14,6 +14,8 @@ vis_tools is a library created to unify the different ways to read, write and di
 ### 1. matplotlib
 
 ```python
+from vis import generate_gradient_2d, PLT
+
 img = generate_gradient_2d()
 
 # Write
@@ -33,6 +35,8 @@ img_PLT = PLT.show(img_PLT)
 ### 2. opencv
 
 ```python
+from vis import generate_gradient_2d, CV2
+
 img = generate_gradient_2d()
 
 # Write
@@ -52,6 +56,8 @@ img_CV2 = CV2.show(img_CV2, wait_time=0) # wait_time=0 waits for user input
 ### 3. PIL
 
 ```python
+from vis import generate_gradient_2d
+
 img = generate_gradient_2d()
 
 # Write
