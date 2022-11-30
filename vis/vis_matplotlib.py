@@ -158,6 +158,7 @@ class PLT(BaseVis):
         show_methods[method](img, cmap=cmap, **kwargs)
 
         plt.title(str(title))
+        plt.show()
 
         return fig
 

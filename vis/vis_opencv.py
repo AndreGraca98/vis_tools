@@ -121,24 +121,17 @@ class CV2(BaseVis):
     @staticmethod
     def show(
         img: imT,
-        resized_shape: Union[Tuple[int, int], None] = None,
-        wait_time: int = 1,
+        wait_time: int = 0,
+        shape: Union[Tuple[int, int], None] = None,
         title: str = "Image",
     ) -> None:
         """Shows the image for a specified time
 
         Args:
-            img (np.ndarray): Image
-            title (str, optional): Image name. Defaults to "Image".
-            wait_time (int, optional): If None, does not wait. If 0, waits for
-            user input. Else waits for the amount of wait_time (miliseconds). Defaults to None.
-
-
-        Args:
             img (imT): Image
-            title (str, optional): Image name. Defaults to "Image".
-            resized_shape (Union[Tuple[int, int], None], optional): Resized image shape. If None shows the full image. Defaults to None.
             wait_time (int, optional): Time to wait in milliseconds. If 0 waits for user input. Defaults to 0.
+            shape (Union[Tuple[int, int], None], optional): Resized image shape. If None shows the full image. Defaults to None.
+            title (str, optional): Image name. Defaults to "Image".
         """
         img = CV2.deal_with_img_types(img)  # type:ignore
 
@@ -149,8 +142,8 @@ class CV2(BaseVis):
                 4,
             ], f"Expected number of channels to be one of [1,3,4]. Got: channels={img.shape[~0]}"
 
-        if resized_shape is not None:
-            img = cv2.resize(img, dsize=resized_shape)  # type:ignore
+        if shape is not None:
+            img = cv2.resize(img, dsize=shape)  # type:ignore
 
         if img.ndim == 3 and img.shape[~0] == 3:
             img = cv2.cvtColor(
