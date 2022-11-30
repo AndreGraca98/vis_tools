@@ -1,6 +1,6 @@
 # Image Visualization Tools
 
-vis_tools is a library created to unify the different ways to read, write and display images ([opencv](https://github.com/opencv/opencv), [matplotlib](https://github.com/matplotlib/matplotlib) or [PIL](https://github.com/python-pillow/Pillow), ...)
+vis_tools is a library created to unify the different ways to read, write and display images ([opencv](https://github.com/opencv/opencv), [matplotlib](https://github.com/matplotlib/matplotlib), [PIL](https://github.com/python-pillow/Pillow), ...)
 
 ## Features
 
@@ -87,3 +87,5 @@ img = generate_gradient_2d()
   1. [x] Implement matplotlib functions
   1. [x] Implement opencv functions
   1. [ ] Implement PIL functions
+  1. [ ] Add more examples to repo
+  2. [ ] Add tests
