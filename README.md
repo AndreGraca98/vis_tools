@@ -9,6 +9,17 @@ vis_tools is a library created to unify the different ways to read, write and di
 - Extract images from a video/directory with videos and save them to a folder
 - Create a video from a directory of images
 
+## Instalation
+
+```bash
+envname=vis
+conda create -n $envname python=3.7 -y
+conda activate $envname
+conda install pytorch==1.12.0 -c pytorch -y
+pip install git+https://github.com/AndreGraca98/vis_tools.git
+
+```
+
 ## How to use
 
 ### 1. matplotlib
