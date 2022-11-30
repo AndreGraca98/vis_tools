@@ -121,7 +121,6 @@ class CV2(BaseVis):
     @staticmethod
     def show(
         img: imT,
-        wait_time: int = 0,
         shape: Union[Tuple[int, int], None] = None,
         title: str = "Image",
     ) -> None:
@@ -129,7 +128,6 @@ class CV2(BaseVis):
 
         Args:
             img (imT): Image
-            wait_time (int, optional): Time to wait in milliseconds. If 0 waits for user input. Defaults to 0.
             shape (Union[Tuple[int, int], None], optional): Resized image shape. If None shows the full image. Defaults to None.
             title (str, optional): Image name. Defaults to "Image".
         """
@@ -152,7 +150,12 @@ class CV2(BaseVis):
 
         cv2.imshow(title, img)
 
-        cv2.waitKeyEx(wait_time)
+        # Support closing the window on 'X' or just pressing a key
+        while cv2.getWindowProperty(title, cv2.WND_PROP_VISIBLE) > 0:
+            ch = cv2.waitKeyEx(1)
+            if ch in list(map(ord, string.printable)):
+                break
+
         cv2.destroyAllWindows()
 
     @staticmethod
