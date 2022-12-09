@@ -25,7 +25,7 @@ pip install git+https://github.com/AndreGraca98/vis_tools.git
 ### 1. matplotlib
 
 ```python
-from vis import generate_gradient_2d, PLT
+from vis_tools import generate_gradient_2d, PLT
 
 img = generate_gradient_2d()
 
@@ -46,7 +46,7 @@ img_PLT = PLT.show(img_PLT, figsize=5)
 ### 2. opencv
 
 ```python
-from vis import generate_gradient_2d, CV2
+from vis_tools import generate_gradient_2d, CV2
 
 img = generate_gradient_2d()
 
@@ -67,7 +67,7 @@ img_CV2 = CV2.show(img_CV2, (224, 224))
 ### 3. PIL
 
 ```python
-from vis import generate_gradient_2d
+from vis_tools import generate_gradient_2d
 
 img = generate_gradient_2d()
 
@@ -88,4 +88,4 @@ img = generate_gradient_2d()
   1. [x] Implement opencv functions
   1. [ ] Implement PIL functions
   1. [ ] Add more examples to repo
-  2. [ ] Add tests
+  1. [ ] Add tests
