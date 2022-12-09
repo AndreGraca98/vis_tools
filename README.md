@@ -1,5 +1,7 @@
 # Image Visualization Tools
 
+![badge](https://img.shields.io/github/package-json/v/AndreGraca98/vis_tools?filename=vis_tools%2Fversion.json&label=vis-tools&logo=python&logoColor=yellow)
+
 vis_tools is a library created to unify the different ways to read, write and display images ([opencv](https://github.com/opencv/opencv), [matplotlib](https://github.com/matplotlib/matplotlib), [PIL](https://github.com/python-pillow/Pillow), ...)
 
 ## Features
