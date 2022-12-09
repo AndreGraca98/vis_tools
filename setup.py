@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="vis-tools",
-    version=json.load(open("vis/version.json"))["version"],
+    version=json.load(open("vis_tools/version.json"))["version"],
     description="vis_tools is a library created to unify the different ways to read, write and display images (opencv, matplotlib, PIL, ...)",
     author="André Graça",
     author_email="andre.p.g@sapo.pt",
